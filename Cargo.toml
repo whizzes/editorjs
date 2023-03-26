@@ -1,0 +1,15 @@
+[package]
+name = "editorjs"
+version = "0.0.0"
+edition = "2021"
+authors = ["Whizzes Contributors <developers@whizzes.io>"]
+description = "EditorJS Bindings for Rust"
+repository = "https://github.com/whizzes/editorjs"
+categories = ["web-programming"]
+keywords = ["editorjs", "api", "bindings", "wysiwyg", "javascript"]
+readme = "README.md"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
