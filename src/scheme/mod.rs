@@ -4,6 +4,7 @@ use rand::prelude::Distribution;
 use serde::{Deserialize, Serialize};
 
 pub mod header;
+pub mod paragraph;
 
 pub const VERSION: &str = "2.12.4";
 
@@ -13,12 +14,14 @@ pub type BlockId = String;
 #[serde(untagged)]
 pub enum BlockData {
     Header(header::HeaderData),
+    Paragraph(paragraph::ParagraphData),
 }
 
 impl BlockData {
     pub fn r#type(&self) -> &str {
         match self {
             BlockData::Header(_) => header::HEADER_BLOCK_TYPE,
+            BlockData::Paragraph(_) => paragraph::PARAGRAPH_BLOCK_TYPE,
         }
     }
 }
