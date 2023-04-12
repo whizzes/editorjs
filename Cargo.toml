@@ -10,6 +10,10 @@ keywords = ["editorjs", "api", "bindings", "wysiwyg", "javascript"]
 readme = "README.md"
 license = "MIT"
 
+[lib]
+name = "editor_js"
+path = "src/lib.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]

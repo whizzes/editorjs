@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 pub const PARAGRAPH_BLOCK_TYPE: &str = "paragraph";
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, PartialEq, Eq, Deserialize, Serialize)]
 pub struct ParagraphData {
     text: String,
 }

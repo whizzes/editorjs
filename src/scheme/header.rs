@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 pub const HEADER_BLOCK_TYPE: &str = "header";
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, PartialEq, Eq, Deserialize, Serialize)]
 pub struct HeaderData {
     text: String,
     level: u8,
