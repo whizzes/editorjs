@@ -42,7 +42,10 @@ mod tests {
 
         match paragraph {
             BlockData::Paragraph(paragraph) => {
-                assert_eq!(paragraph.text, "Hey. Meet the new Editor. On this page you can see it in action — try to edit this text. Source code of the page contains the example of connection and configuration.");
+                assert_eq!(
+                    paragraph.text,
+                    "Hey. Meet the new Editor. On this page you can see it in action — try to edit this text. Source code of the page contains the example of connection and configuration."
+                );
             }
             _ => panic!("Expected paragraph block"),
         }

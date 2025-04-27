@@ -2,8 +2,10 @@ use std::fmt::Display;
 use std::str::FromStr;
 use std::time::{SystemTime, UNIX_EPOCH};
 
-use rand::prelude::Distribution;
 use serde::{Deserialize, Serialize};
+
+#[cfg(feature = "builder")]
+use rand::prelude::Distribution;
 
 pub mod header;
 pub mod paragraph;
@@ -37,6 +39,7 @@ pub struct Block {
 }
 
 impl Block {
+    #[cfg(feature = "builder")]
     pub fn new(data: BlockData) -> Self {
         Block {
             id: Self::generate_id(),
@@ -57,6 +60,7 @@ impl Block {
         self.data.clone()
     }
 
+    #[cfg(feature = "builder")]
     fn generate_id() -> BlockId {
         let mut rng = rand::thread_rng();
         let id: String = rand::distributions::Alphanumeric
@@ -86,6 +90,7 @@ impl Scheme {
         }
     }
 
+    #[cfg(feature = "builder")]
     pub fn add_block(&mut self, block: Block) {
         self.blocks.push(block);
     }
